@@ -1,0 +1,24 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: aniketmagadum.helpdesk::lang.general.title
+        span: left
+    category:
+        label: aniketmagadum.helpdesk::lang.category.label
+        type: relation
+        span: right
+    description:
+        label: aniketmagadum.helpdesk::lang.general.description
+        type: textarea
+        size: small
+    labels:
+        label: aniketmagadum.helpdesk::lang.labels.menu_label
+        type: relation
+        span: left
+    status:
+        label: aniketmagadum.helpdesk::lang.general.status
+        type: balloon-selector
+        span: right

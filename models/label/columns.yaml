@@ -1,0 +1,16 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    name:
+        label: aniketmagadum.helpdesk::lang.general.name
+        type: partial
+        path: ~/plugins/aniketmagadum/helpdesk/models/label/_color.htm
+    tickets:
+        label: aniketmagadum.helpdesk::lang.tickets.no_of_tickets
+        relation: tickets
+        useRelationCount: true

@@ -1,0 +1,17 @@
+# ===================================
+#  Relation Behavior Config
+# ===================================
+
+comments:
+    label: Comment
+    manage:
+        form: $/aniketmagadum/helpdesk/models/comment/fields.yaml
+        list: $/aniketmagadum/helpdesk/models/comment/columns.yaml
+    view:
+        list: $/aniketmagadum/helpdesk/models/comment/columns.yaml
+        toolbarButtons: create
+        showCheckboxes: false
+        showSorting: false
+        defaultSort:
+            column: created_at
+            direction: asc

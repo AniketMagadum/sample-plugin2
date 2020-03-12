@@ -1,0 +1,14 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    name:
+        label: aniketmagadum.helpdesk::lang.general.name
+    tickets:
+        label: aniketmagadum.helpdesk::lang.tickets.no_of_tickets
+        relation: tickets
+        useRelationCount: true

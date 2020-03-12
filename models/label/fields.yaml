@@ -1,0 +1,14 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        label: aniketmagadum.helpdesk::lang.general.name
+    description:
+        label: aniketmagadum.helpdesk::lang.general.description
+        type: textarea
+        size: small
+    color:
+        label: aniketmagadum.helpdesk::lang.general.color
+        type: colorpicker

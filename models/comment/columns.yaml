@@ -1,0 +1,15 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    userable:
+        label: User
+        relation: userable
+        valueFrom: login
+    comment:
+        label: Comment
+    created_at:
+        label: Created At
+        type: time_since
+    

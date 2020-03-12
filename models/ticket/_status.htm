@@ -1,0 +1,14 @@
+<span>
+    <?php 
+        $color="";
+        if($value==="open"){
+            $color = "green";
+        }else{
+            $color = "red";
+        }
+    ?>
+    <span
+        style="background-color: <?=$color?>;padding:5px;font-weight:500;color:white;border-radius:3px"
+        ><?=ucfirst($value)?></span
+    >
+</span>

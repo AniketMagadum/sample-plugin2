@@ -1,0 +1,21 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    id:
+        label: ID
+        searchable: true
+    title:
+        label: aniketmagadum.helpdesk::lang.general.title
+        searchable: true
+    category:
+        label: aniketmagadum.helpdesk::lang.category.label
+        relation: category
+        type: text
+        valueFrom: name
+        sortable: false
+    status:
+        label: aniketmagadum.helpdesk::lang.general.status
+        type: partial
+        path: ~/plugins/aniketmagadum/helpdesk/models/ticket/_status.htm

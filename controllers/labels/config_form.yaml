@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: aniketmagadum.helpdesk::lang.label.label
+
+# Model Form Field configuration
+form: $/aniketmagadum/helpdesk/models/label/fields.yaml
+
+# Model Class name
+modelClass: AniketMagadum\Helpdesk\Models\Label
+
+# Default redirect location
+defaultRedirect: aniketmagadum/helpdesk/labels
+
+# Create page
+create:
+    title: aniketmagadum.helpdesk::lang.label.create_title
+    redirect: aniketmagadum/helpdesk/labels/update/:id
+    redirectClose: aniketmagadum/helpdesk/labels
+
+# Update page
+update:
+    title: aniketmagadum.helpdesk::lang.label.update_title
+    redirect: aniketmagadum/helpdesk/labels
+    redirectClose: aniketmagadum/helpdesk/labels
+
+# Preview page
+preview:
+    title: aniketmagadum.helpdesk::lang.label.preview_title

@@ -1,0 +1,9 @@
+1.0.1:
+    - First version of Helpdesk
+    - create_categories_table.php
+    - create_labels_table.php
+    - create_tickets_table.php
+    - create_label_ticket_table.php
+    - create_comments_table.php
+    - seed_all_tables.php
+    

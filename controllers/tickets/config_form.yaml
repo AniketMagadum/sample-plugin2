@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: aniketmagadum.helpdesk::lang.ticket.label
+
+# Model Form Field configuration
+form: $/aniketmagadum/helpdesk/models/ticket/fields.yaml
+
+# Model Class name
+modelClass: AniketMagadum\Helpdesk\Models\Ticket
+
+# Default redirect location
+defaultRedirect: aniketmagadum/helpdesk/tickets
+
+# Create page
+create:
+    title: aniketmagadum.helpdesk::lang.ticket.create_title
+    redirect: aniketmagadum/helpdesk/tickets/update/:id
+    redirectClose: aniketmagadum/helpdesk/tickets
+
+# Update page
+update:
+    title: aniketmagadum.helpdesk::lang.ticket.update_title
+    redirect: aniketmagadum/helpdesk/tickets
+    redirectClose: aniketmagadum/helpdesk/tickets
+
+# Preview page
+preview:
+    title: aniketmagadum.helpdesk::lang.ticket.preview_title

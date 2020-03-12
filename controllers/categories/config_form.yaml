@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: aniketmagadum.helpdesk::lang.category.label
+
+# Model Form Field configuration
+form: $/aniketmagadum/helpdesk/models/category/fields.yaml
+
+# Model Class name
+modelClass: AniketMagadum\Helpdesk\Models\Category
+
+# Default redirect location
+defaultRedirect: aniketmagadum/helpdesk/categories
+
+# Create page
+create:
+    title: aniketmagadum.helpdesk::lang.category.create_title
+    redirect: aniketmagadum/helpdesk/categories/update/:id
+    redirectClose: aniketmagadum/helpdesk/categories
+
+# Update page
+update:
+    title: aniketmagadum.helpdesk::lang.category.update_title
+    redirect: aniketmagadum/helpdesk/categories
+    redirectClose: aniketmagadum/helpdesk/categories
+
+# Preview page
+preview:
+    title: aniketmagadum.helpdesk::lang.category.preview_title
