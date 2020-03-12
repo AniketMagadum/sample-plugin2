@@ -17,6 +17,7 @@ class CreateTicketsTable extends Migration
             $table->text('description')->nullable();
             $table->integer('category_id')->unsigned();
             $table->enum('status', ['open', 'closed'])->default('open');
+            $table->morphs('createable');
             $table->timestamps();
         });
     }

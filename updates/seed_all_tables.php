@@ -24,13 +24,5 @@ class SeedAllTables extends Seeder
             'name' => 'Low Priority',
             'color' => '#f1c40f'
         ]);
-
-        $ticket = Ticket::create([
-            'title' => 'Sample Ticket',
-            'description' => 'You may delete this ticket',
-            'category_id' => $category->id
-        ]);
-
-        $ticket->labels()->add($label);
     }
 }

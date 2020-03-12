@@ -2,7 +2,6 @@
 
 namespace AniketMagadum\Helpdesk;
 
-use AniketMagadum\Helpdesk\Models\Comment;
 use Backend;
 use Backend\Models\User as BackendUser;
 use RainLab\User\Models\User;
@@ -14,7 +13,9 @@ use Illuminate\Database\Eloquent\Factory as EloquentFactory;
  */
 class Plugin extends PluginBase
 {
-    public $require = ['Rainlab.User'];
+    public $require = [
+        'Rainlab.User'
+    ];
     /**
      * Returns information about this plugin.
      *
@@ -37,7 +38,7 @@ class Plugin extends PluginBase
      */
     public function register()
     {
-        app(EloquentFactory::class)->load(plugins_path('factories'));
+        app(EloquentFactory::class)->load(plugins_path('aniketmagadum/helpdesk/factories'));
     }
 
     /**
@@ -47,20 +48,12 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
-        User::extend(function ($model) {
-            $model->morphOne = [
-                'comment' =>  [
-                    Comment::class, 'name' => 'userable'
-                ],
-            ];
+        User::extend(function ($user) {
+            $user->morphOne['ticket'] = [Ticket::class, 'name' => 'createable'];
         });
 
-        BackendUser::extend(function ($model) {
-            $model->morphOne = [
-                'comment' =>  [
-                    Comment::class, 'name' => 'userable'
-                ],
-            ];
+        BackendUser::extend(function ($user) {
+            $user->morphOne['ticket'] = [Ticket::class, 'name' => 'createable'];
         });
     }
 

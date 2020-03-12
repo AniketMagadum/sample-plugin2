@@ -2,7 +2,9 @@
 
 namespace AniketMagadum\Helpdesk\Models;
 
+use Backend\Facades\BackendAuth;
 use Model;
+use RainLab\User\Facades\Auth;
 
 /**
  * Ticket Model
@@ -75,7 +77,9 @@ class Ticket extends Model
     public $belongsToMany = [
         'labels' => [Label::class, 'table' => 'aniketmagadum_helpdesk_label_ticket']
     ];
-    public $morphTo = [];
+    public $morphTo = [
+        'createable' => []
+    ];
     public $morphOne = [];
     public $morphMany = [];
     public $attachOne = [];
@@ -87,5 +91,15 @@ class Ticket extends Model
             'open' => 'Open',
             'closed' => 'Closed',
         ];
+    }
+
+    public function beforeValidate()
+    {
+        //Give preference to backend user if both loggedin
+        if (BackendAuth::check()) {
+            $this->createable = BackendAuth::getUser();
+        } else {
+            $this->createable = Auth::getUser();
+        }
     }
 }
